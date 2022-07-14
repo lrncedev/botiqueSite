@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  /* outline: 1px solid white; */
+}
+
+/* NAVBAR */
+
+nav {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  min-height: 3rem;
+}
+
+.nav-logo {
+  color:#FFF0E1;  
+}
+
+.owner {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #ffafaf;
+}
+
+.store  {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.icon {
+  color:#FFF0E1;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+
+.nav-link {
+  opacity: 0;
+  position: absolute;
+  min-width: 100%;
+  top: -100%;
+  left:0;
+  transition: all .3s ease-in-out;
+}
+
+.nav-link.active {
+  display: block;
+  position: absolute;
+  top: 4.5rem;
+  background-color: black;
+  opacity: .8;
+}
+
+.nav-link li {
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+.nav-link li:hover {
+  background-color: rgb(74, 73, 73)
+}
+
+.nav-link a {
+  color: #fbdddd;
+} 
+
+.collection-list {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.collection-list a{
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: .5rem;
+  color: white;
+  text-align: left;
+}
+
+.collection-list a:hover {
+  background-color: rgb(74, 73, 73)
+}
+
+.collection:hover .collection-list{
+  display: block;
+}
+
+/* NAVBAR END */
+
+
+
+
+/* NAVBAR END */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.223),rgba(0, 0, 0, 0.32)) ,url("https://cdn.pixabay.com/photo/2022/07/06/12/58/woman-7305088_960_720.jpg");
+  width: 100%;
+  min-height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: clamp(4rem, 10vw, 6.5rem); 
+}
+
+.hero-text h3 {
+  text-transform: lowercase;
+  font-weight: 200;
+}
+
+.qoute {
+  display: flex;
+  padding: 0 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem); 
+  flex-direction: column;
+}
+
+.speaker {
+  align-self: flex-end;
+  font-weight: 700;
+} 
+
+@media screen and (min-width: 40em) {
+  nav {
+    display: flex;align-items: center;
+  }
+  .nav-logo {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+  }
+  .nav-link, .nav-link.active{
+    opacity: 1;
+    position: static;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    display: none;
+  }
+
+}
