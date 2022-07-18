@@ -1,45 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Botique</title>
-</head>
-<body>
-  <nav>
-    <div class="nav-logo">
-    <p class="owner">MELISSA'S</p>
-    <P class="store">Botique</P>
-    </div>
-    <ul class="nav-link" id="nav-link">
-      <li><a href="">Best Sellers</a></li>
-      <li class="reviews"><a href="">Reviews</a></li>
-      <li class="live"><a href="">Live Selling</a></li>
-      <li class="collection">
-        <a href="">Collection</a>
-        <div class="collection-list">
-          <a href="">Shoes</a>
-          <a href="">Clothes</a>
-          <a href="">Watches</a>
-          <a href="">Beauty Products</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Botique</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <p class="owner">MELISSA'S</p>
+        <p class="store">Botique</p>
+      </div>
+      <ul class="nav-link" id="nav-link">
+        <li><a href="#best-seller">Best Sellers</a></li>
+        <li class="reviews"><a href="">Reviews</a></li>
+        <li class="live"><a href="">Live Selling</a></li>
+        <li class="collection">
+          <a href="">Collection</a>
+          <div class="collection-list">
+            <a href="">Shoes</a>
+            <a href="">Clothes</a>
+            <a href="">Watches</a>
+            <a href="">Beauty Products</a>
+          </div>
+        </li>
+      </ul>
+      <button class="icon" onclick="showMenu()">
+        <i class="fa fa-bars menu-icon"></i>
+      </button>
+    </nav>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>LEVEL UP YOUR OOTD</h1>
+        <h3 class="qoute">To be confident means to be in love with life</h3>
+      </div>
+      <a href="" class="shop">Shop now</a>
+    </section>
+    <div class="best-seller" id="best-seller">
+      <h2 class="section-title">Best Sellers</h2>
+      <div class="row best-gallery">
+        <div class="column">
+          <img
+            src="https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Bag Picture"
+          />
+          <img
+            src="https://hyperight.com/wp-content/uploads/2019/08/image-6-4-1024x683.jpg"
+            alt=""
+          />
+          <img
+            src="https://images.pexels.com/photos/7679659/pexels-photo-7679659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
         </div>
-      </li>
-    </ul>
-    <button class="icon" onclick="showMenu()">
-      <i class="fa fa-bars menu-icon"></i>
-    </button>
-  </nav>
-  <div class="hero">
-    <div class="hero-text">
-      <h1>LEVEL UP YOUR OOTD</h1>
-      <div class="qoute">
-        <h3>To be confident means to be in love with life</h3>
+        <div class="column">
+          <img
+            src="https://images.pexels.com/photos/1120275/pexels-photo-1120275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <img
+            src="https://images.pexels.com/photos/179909/pexels-photo-179909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+
+          <img
+            src="https://images.pexels.com/photos/1082529/pexels-photo-1082529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
