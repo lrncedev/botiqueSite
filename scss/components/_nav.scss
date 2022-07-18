@@ -1,0 +1,161 @@
+/* GLOBAl STYLES - Mobile first approach */
+nav {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  min-height: 3rem;
+  font-size: 130%;
+
+  .nav-logo {
+    color: #FFF0E1;
+  }
+
+  .owner {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #ffafaf;
+    margin-bottom: 0;
+  }
+
+  .icon {
+    color: #FFF0E1;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    text-align: right;
+    background-color: transparent;
+  }
+
+  .nav-link {
+    opacity: 0;
+    position: absolute;
+    min-width: 100%;
+    top: -100%;
+    left: 0;
+    transition: all .37s linear;
+    list-style-type: disc;
+
+      a {
+        color: #fbdddd;
+      }
+    
+      li {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        
+        &:hover {
+          background-color: rgb(74, 73, 73);
+        }
+      }
+
+      &.active {
+        display: block;
+        position: absolute;
+        top: 5rem;
+        background-color: black;
+        opacity: .8;
+        padding-left: 0;
+        padding: .4rem 0 .4rem 0;
+
+        li {
+          padding: .5rem;
+          text-transform: uppercase;
+
+          &:not(:last-child):hover {
+            border-bottom: 1px solid #eee;
+          }
+        }
+
+        .collection {
+          .collection-list {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            
+            a {
+              display: block;
+              position: relative;
+              z-index: 1;
+              padding: 0.5rem;
+              color: white;
+              text-align: left;
+              
+              &:hover {
+                background-color: rgb(74, 73, 73);
+              }
+            }
+          }
+
+          &:hover .collection-list {
+            display: block;
+          }
+        }
+      }
+  }
+}
+
+
+/* MEDIA QUERY FOR NAVBAR*/
+
+@media screen and (min-width: 40em) {
+  nav {
+    align-items: center;
+
+    .store {
+      margin-bottom: 0;
+    }
+
+    .nav-logo {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .icon {
+      display: none;
+    }
+
+    .nav-link {
+      opacity: 1;
+      position: static;
+      z-index: 0;
+      display: flex;
+      padding-left: 0;
+      justify-content: center;
+
+      .collection {
+        &:hover .collection-list {
+            display: block;
+        }
+
+        .collection-list {
+          display: none;
+          position: absolute;
+          background-color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          
+          a {
+            display: block;
+            position: relative;
+            z-index: 1;
+            padding: 0.5rem;
+            color: white;
+            text-align: left;
+            
+            &:hover {
+                background-color: rgb(74, 73, 73);
+            }
+          }
+        }
+      }
+    }
+  }
+}

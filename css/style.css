@@ -1,0 +1,172 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* GLOBAl STYLES - Mobile first approach */
+nav {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  min-height: 3rem;
+  font-size: 130%;
+}
+nav .nav-logo {
+  color: #FFF0E1;
+}
+nav .owner {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #ffafaf;
+  margin-bottom: 0;
+}
+nav .icon {
+  color: #FFF0E1;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  text-align: right;
+  background-color: transparent;
+}
+nav .nav-link {
+  opacity: 0;
+  position: absolute;
+  min-width: 100%;
+  top: -100%;
+  left: 0;
+  transition: all 0.37s linear;
+  list-style-type: disc;
+}
+nav .nav-link a {
+  color: #fbdddd;
+}
+nav .nav-link li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+nav .nav-link li:hover {
+  background-color: rgb(74, 73, 73);
+}
+nav .nav-link.active {
+  display: block;
+  position: absolute;
+  top: 5rem;
+  background-color: black;
+  opacity: 0.8;
+  padding-left: 0;
+  padding: 0.4rem 0 0.4rem 0;
+}
+nav .nav-link.active li {
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+nav .nav-link.active li:not(:last-child):hover {
+  border-bottom: 1px solid #eee;
+}
+nav .nav-link.active .collection .collection-list {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+nav .nav-link.active .collection .collection-list a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: 0.5rem;
+  color: white;
+  text-align: left;
+}
+nav .nav-link.active .collection .collection-list a:hover {
+  background-color: rgb(74, 73, 73);
+}
+nav .nav-link.active .collection:hover .collection-list {
+  display: block;
+}
+
+/* MEDIA QUERY FOR NAVBAR*/
+@media screen and (min-width: 40em) {
+  nav {
+    align-items: center;
+  }
+  nav .store {
+    margin-bottom: 0;
+  }
+  nav .nav-logo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  nav .icon {
+    display: none;
+  }
+  nav .nav-link {
+    opacity: 1;
+    position: static;
+    z-index: 0;
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+  }
+  nav .nav-link .collection:hover .collection-list {
+    display: block;
+  }
+  nav .nav-link .collection .collection-list {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  nav .nav-link .collection .collection-list a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem;
+    color: white;
+    text-align: left;
+  }
+  nav .nav-link .collection .collection-list a:hover {
+    background-color: rgb(74, 73, 73);
+  }
+}
