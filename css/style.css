@@ -56,6 +56,9 @@ nav .owner {
   color: #ffafaf;
   margin-bottom: 0;
 }
+nav .store {
+  margin-bottom: 0;
+}
 nav .icon {
   color: #FFF0E1;
   position: absolute;
@@ -73,12 +76,13 @@ nav .nav-link {
   left: 0;
   transition: all 0.37s linear;
   list-style-type: disc;
+  margin-top: 0.5rem;
 }
 nav .nav-link a {
   color: #fbdddd;
 }
 nav .nav-link li {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   cursor: pointer;
 }
 nav .nav-link li:hover {
@@ -87,7 +91,7 @@ nav .nav-link li:hover {
 nav .nav-link.active {
   display: block;
   position: absolute;
-  top: 5rem;
+  top: 4.7rem;
   background-color: black;
   opacity: 0.8;
   padding-left: 0;
@@ -146,6 +150,7 @@ nav .nav-link.active .collection:hover .collection-list {
     display: flex;
     padding-left: 0;
     justify-content: center;
+    margin: 0.5rem 0 0.2rem 0;
   }
   nav .nav-link .collection:hover .collection-list {
     display: block;
@@ -168,5 +173,112 @@ nav .nav-link.active .collection:hover .collection-list {
   }
   nav .nav-link .collection .collection-list a:hover {
     background-color: rgb(74, 73, 73);
+  }
+  nav .nav-link.active {
+    opacity: 1;
+    position: static;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.223), rgba(0, 0, 0, 0.32)), url("https://cdn.pixabay.com/photo/2022/07/06/12/58/woman-7305088_960_720.jpg");
+  min-width: 100%;
+  padding: 1rem;
+  min-height: calc(100vh - 6rem);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  gap: 1rem;
+}
+.hero .hero-text h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: clamp(4rem, 8vw, 6.2rem);
+  margin-bottom: 0;
+}
+.hero .hero-text h3 {
+  text-transform: lowercase;
+  font-weight: 200;
+}
+.hero .hero-text h3.qoute {
+  display: flex;
+  padding: 0 2rem;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.hero .shop {
+  background-color: #9e0022;
+  color: white;
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  font-weight: 200;
+  padding: 0.6rem 2rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s linear;
+}
+.hero .shop:hover {
+  transform: scale(1.2);
+}
+
+.best-seller {
+  background-color: #f6d4d4;
+  padding: 2rem;
+}
+.best-seller .section-title {
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  margin-bottom: 2rem;
+}
+.best-seller .best-gallery {
+  display: flex;
+  flex-direction: column;
+}
+.best-seller .best-gallery .column {
+  width: 100%;
+  flex-wrap: wrap;
+}
+.best-seller .best-gallery .column img {
+  width: 100%;
+  max-height: 20%;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+.best-seller .best-gallery .column img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 40em) {
+  .best-gallery {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .best-gallery .column {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .best-gallery .column img:nth-child(3) {
+    display: block;
+  }
+  .best-gallery .column img {
+    max-width: 30%;
+    padding: 0.3rem;
   }
 }

@@ -19,6 +19,10 @@ nav {
     margin-bottom: 0;
   }
 
+  .store {
+    margin-bottom: 0;
+  }
+
   .icon {
     color: #FFF0E1;
     position: absolute;
@@ -37,13 +41,13 @@ nav {
     left: 0;
     transition: all .37s linear;
     list-style-type: disc;
-
+    margin-top: .5rem;
       a {
         color: #fbdddd;
       }
     
       li {
-        padding: 0.5rem 1rem;
+        padding: .2rem 1rem;
         cursor: pointer;
         
         &:hover {
@@ -54,7 +58,7 @@ nav {
       &.active {
         display: block;
         position: absolute;
-        top: 5rem;
+        top: 4.7rem;
         background-color: black;
         opacity: .8;
         padding-left: 0;
@@ -128,7 +132,7 @@ nav {
       display: flex;
       padding-left: 0;
       justify-content: center;
-
+      margin: .5rem 0 .2rem 0;
       .collection {
         &:hover .collection-list {
             display: block;
@@ -155,6 +159,14 @@ nav {
             }
           }
         }
+      }
+
+      &.active {
+        opacity: 1;
+        position: static;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
       }
     }
   }
